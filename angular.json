@@ -98,9 +98,24 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "outFile": "report.json",
+            "outputPath": "coverage",
+            "format": "json",
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "angular-eslint-output-issue"
+  "defaultProject": "angular-eslint-output-issue",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
